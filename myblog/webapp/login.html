@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>看板娘登陆平台</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/login.css" />
+	<link rel="stylesheet" href="layui/css/layui.css" />
+
+	<link rel="stylesheet" href="css/library/master.css" />
+	<link rel="stylesheet" href="css/library/gloable.css" />
+	<link rel="stylesheet" href="css/library/nprogress.css" />
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js\live2d\live2d.min.js"></script>
+	<script src="js/login.js"></script>
+</head>
+
+<body class="text-center">
+	<div class="header">
+	</div>
+	<header class="gird-header">
+		<div class="header-fixed">
+			<div class="header-inner">
+				<a href="javascript:void(0)" class="header-logo" id="logo">Mr.Zou</a>
+				<nav class="nav" id="nav">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="article.html">博客</a></li>
+						<li><a href="message.html">留言</a></li>
+						<li><a href="diary.html">日记</a></li>
+						<li><a href="link.html">友链</a></li>
+					</ul>
+				</nav>
+				<a href="login.html" class="blog-user">
+					<i class="fa fa-user-circle-o"></i>
+				</a>
+				<a class="phone-menu">
+					<i></i>
+					<i></i>
+					<i></i>
+				</a>
+			</div>
+		</div>
+	</header>
+	<!-- url(image/background/background4.png) -->
+	<div class="doc-container" id="doc-container" style="background-image: none;">
+		<form id="form-signin" class="form-signin" action="" method="POST">
+			<div id="stage">
+				<div id="inner">
+					<div id="cover">
+						<div id="detail"></div>
+						<div id="handle"></div>
+					</div>
+					<canvas class="mb-4" id="live2d" width="800" height="800"></canvas>
+				</div>
+				<a id="info" href="javascript:info()"><i class="fa fa-lg fa-info"></i></a>
+				<a id="refresh" href="javascript:refresh()"><i class="fa fa-lg fa-refresh"></i></a>
+			</div>
+			<div class="loginpad">
+				<h1 class="h3 mb-3 font-weight-normal">登陆</h1>
+				<label for="userid" class="sr-only">用户名</label>
+				<input type="text" name="userid" class="form-control" placeholder="用户名" required autofocus>
+				<label for="password" class="sr-only">密码</label>
+				<input type="password" name="password" class="form-control" placeholder="密码" required>
+			</div>
+			<button id="signin" class="btn-signin btn-lg btn-primary btn-block" type="submit">登录</button>
+		</form>
+		<div class="form-register" action="login.php" method="post">
+			<button id="register" class="btn-register btn-lg btn-primary btn-block">注册</button>
+		</div>
+
+	</div>
+	<footer class="grid-footer">
+		<div class="footer-fixed">
+			<div class="copyright">
+				<div class="info">
+					<div class="contact">
+						<a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
+						<a href="#" class="qq" target="_blank"><i class="fa fa-qq"></i></a>
+						<a href="#" class="email" target="_blank"><i class="fa fa-envelope"></i></a>
+						<a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+					</div>
+					<p class="mt05">
+						Copyright &copy; 2019-2020 走出现有幼稚 All Rights Reserved V.1.0.0 Power by 走出现有幼稚
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	
+
+</body>
+
+</html>
