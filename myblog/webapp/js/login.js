@@ -110,26 +110,183 @@ window.addEventListener("load", () => {
 			coverPosition("80%");
 		}
 	});
-});
-$(document).ready(function () {
-	$("#signin").click(function (e) {
-		window.location.href = "chat.html";
-		var userid = $('input[name="userid"]').val();
-		var password = $('input[name="password"]').val();
-		if(userid.length==0||password.length==0){
-			//alert("请输入用户名或密码");
-			return;
-		}
-		e.preventDefault();
+	//登陆管理
+	$("#forget-box").hide();
+	$("#code-box").hide();
+	$("#updatePassword-box").hide();
+	$("#register-box").hide();
+	var code = 0;
+	var email = "";
+	//修改密码
+	window.updatePassword = function () {
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:8080/back-up/quick3",
-			data: $('#form-signin').serialize(),
+			url: "http://localhost:8080/back-up/UpdatePassword",
+			data: {
+				useremail: email,
+				password: $("#password").val()
+			},
 			contentType: "application/x-www-form-urlencoded",
 			success: function (res, status) {
 				if (res == "success") {
 					console.log(res);
-					window.location.href = "chat.html";
+					$("#signin-box").show();
+					$("#updatePassword-box").hide();
+					alert("修改成功！");
+				}
+				else if (res == "fail") {
+					alert("修改失败！");
+				}
+			},
+			error: function (xhr, errorText, errorType) {
+				if (xhr.status == 401) {
+					//do something
+				}
+			},
+			complete: function () {
+				//do something
+			}
+		})
+	}
+	window.checkCode = function () {
+		if (code == $("#code").val()) {
+			$("#updatePassword-box").show();
+			$("#code-box").hide();
+		}
+		else {
+			alert("验证码错误");
+		}
+
+	}
+	window.sendEmail = function () {
+		var data = $("#useremail").val();
+		sendEmailFun(data);
+		$("#code-box").show();
+		$("#forget-box").hide();
+	}
+	window.goToForget = function () {
+		$("#forget-box").show();
+		$("#signin-box").hide();
+	}
+
+	//注册
+	window.goToRegister = function () {
+		$("#signin-box").hide();
+		$("#register-box").show();
+	}
+	window.register = function () {
+
+		var data = $("input[name='code-register']").val();
+		if (code != data) {
+			alert("验证码错误");
+			return;
+		}
+		$.ajax({
+			type: "GET",
+			url: "http://localhost:8080/back-up/CheckUserEmail",
+			data: {
+				useremail: data
+			},
+			contentType: "application/x-www-form-urlencoded",
+			success: function (res, status) {
+				if (res == "success") {
+					alert("邮箱已存在！");
+					return;
+				}
+				else if (res == "fail") {
+					$.ajax({
+						type: "POST",
+						url: "http://localhost:8080/back-up/AddUser",
+						data:
+						{
+							useremail: $('input[name="useremail-register"]').val(),
+							password: $('input[name="password-register"]').val()
+						},
+						contentType: "application/x-www-form-urlencoded",
+						success: function (res, status) {
+							if (res == "success") {
+								console.log(res);
+								alert("注册成功！");
+								$("#signin-box").show();
+								$("#register-box").hide();
+							}
+							else if (res == "fail") {
+								alert("注册失败！");
+							}
+						},
+						error: function (xhr, errorText, errorType) {
+							if (xhr.status == 401) {
+								//do something
+							}
+						},
+						complete: function () {
+							//do something
+						}
+					})
+				}
+			},
+			error: function (xhr, errorText, errorType) {
+				if (xhr.status == 401) {
+					//do something
+				}
+			},
+			complete: function () {
+				//do something
+			}
+		})
+
+
+
+	}
+	window.getCode = function () {
+		var data = $("input[name='useremail-register']").val();
+		console.log(data);
+		if (data.length == 0) {
+			alert("邮箱为空");
+			return;
+		}
+		sendEmailFun(data);
+	}
+
+	//发送邮件
+	function sendEmailFun(e) {
+		alert("邮箱发送成功");
+		$.ajax({
+			type: "GET",
+			url: "http://localhost:8080/back-up/SendEmail",
+			data: {
+				useremail: e
+			},
+			contentType: "application/x-www-form-urlencoded",
+			success: function (res, status) {
+				if (status == "success") {
+					console.log(res);
+					code = res;
+					email = $("#useremail").val();
+				}
+			},
+			error: function (xhr, errorText, errorType) {
+				if (xhr.status == 401) {
+					//do something
+				}
+			},
+			complete: function () {
+				//do something
+			}
+		})
+	}
+
+	//登陆
+	window.signin = function () {
+		$.ajax({
+			type: "GET",
+			url: "http://localhost:8080/back-up/CheckUser",
+			data: $('#signin-box').serialize(),
+			contentType: "application/x-www-form-urlencoded",
+			success: function (res, status) {
+				if (res == "success") {
+					console.log(res);
+					window.location.href = "index.html";
 				}
 				else if (res == "fail") {
 					alert("密码错误！");
@@ -144,5 +301,5 @@ $(document).ready(function () {
 				//do something
 			}
 		})
-	});
+	}
 });

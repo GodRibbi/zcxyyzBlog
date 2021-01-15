@@ -92,7 +92,7 @@
                 } else {
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8080/back-up/quick4",
+                        url: "http://127.0.0.1:8080/back-up/SendMsgs",
                         data: {
                             name: $n,
                             value: $nei
@@ -117,8 +117,8 @@
         });
         function link() {
             $.ajax({
-                        type: "POST",
-                        url: "http://localhost:8080/back-up/quick44",
+                        type: "GET",
+                        url: "http://127.0.0.1:8080/back-up/GetMsgs",
                         contentType: "application/x-www-form-urlencoded",
                         success: function (res, status) {
                             if (status == "success") {

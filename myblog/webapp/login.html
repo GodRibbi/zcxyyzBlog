@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>看板娘登陆平台</title>
+	<title>登陆</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/login.css" />
@@ -13,8 +13,8 @@
 	<link rel="stylesheet" href="css/library/master.css" />
 	<link rel="stylesheet" href="css/library/gloable.css" />
 	<link rel="stylesheet" href="css/library/nprogress.css" />
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js\live2d\live2d.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/live2d/live2d.min.js"></script>
 	<script src="js/login.js"></script>
 </head>
 
@@ -47,29 +47,68 @@
 	</header>
 	<!-- url(image/background/background4.png) -->
 	<div class="doc-container" id="doc-container" style="background-image: none;">
-		<form id="form-signin" class="form-signin" action="" method="POST">
-			<div id="stage">
-				<div id="inner">
-					<div id="cover">
-						<div id="detail"></div>
-						<div id="handle"></div>
+		<div class="blank"></div>
+		<div class="all-box">
+			<form id="signin-box" class="signin-box form-all" action="javascript:signin();" method="POST">
+					<div id="stage">
+						<div id="inner">
+							<div id="cover">
+								<div id="detail"></div>
+								<div id="handle"></div>
+							</div>
+							<canvas class="mb-4" id="live2d" width="800" height="800"></canvas>
+						</div>
+						<a id="info" href="javascript:info()"><i class="fa fa-lg fa-info"></i></a>
+						<a id="refresh" href="javascript:refresh()"><i class="fa fa-lg fa-refresh"></i></a>
 					</div>
-					<canvas class="mb-4" id="live2d" width="800" height="800"></canvas>
+					<div class="pad">
+						<h1 class="h3 mb-3 font-weight-normal">登陆</h1>
+						<label for="useremail" class="sr-only">邮箱</label>
+						<input type="text" name="useremail" class="form-control" placeholder="邮箱" required autofocus>
+						<label for="password" class="sr-only">密码</label>
+						<input type="password" name="password" class="form-control" placeholder="密码" required>
+						<a id="forget-btn" href="javascript:goToForget();">忘记密码？</a>
+					</div>
+					<button id="signin" class="btn-signin btn-lg btn-primary btn-block" type="submit">登录</button>
+					<button id="register" class="btn-register btn-lg btn-primary btn-block" onclick="goToRegister();">注册</button>
+			</form>
+			<form id="forget-box" action="javascript:sendEmail();" class="forget-box form-all">
+				<div class="pad">
+					<h1 class="h3 mb-3 font-weight-normal">找回密码</h1>
+					<label for="useremail" class="sr-only">电子邮箱</label>
+					<input id="useremail" type="text" name="useremail" class="form-control" placeholder="电子邮箱" required autofocus>
 				</div>
-				<a id="info" href="javascript:info()"><i class="fa fa-lg fa-info"></i></a>
-				<a id="refresh" href="javascript:refresh()"><i class="fa fa-lg fa-refresh"></i></a>
-			</div>
-			<div class="loginpad">
-				<h1 class="h3 mb-3 font-weight-normal">登陆</h1>
-				<label for="userid" class="sr-only">用户名</label>
-				<input type="text" name="userid" class="form-control" placeholder="用户名" required autofocus>
-				<label for="password" class="sr-only">密码</label>
-				<input type="password" name="password" class="form-control" placeholder="密码" required>
-			</div>
-			<button id="signin" class="btn-signin btn-lg btn-primary btn-block" type="submit">登录</button>
-		</form>
-		<div class="form-register" action="login.php" method="post">
-			<button id="register" class="btn-register btn-lg btn-primary btn-block">注册</button>
+				<button id="forget-next" class="btn-forget btn-lg btn-primary btn-block" type="submit">下一步</button>
+			</form>
+			<form id="code-box" action="javascript:checkCode();" class="code-box form-all">
+				<div class="pad">
+					<h1 class="h3 mb-3 font-weight-normal">请输入验证码</h1>
+					<label for="code" class="sr-only">验证码</label>
+					<input id="code" type="text" name="code" class="form-control" placeholder="验证码" required autofocus>
+				</div>
+				<button id="code-next" class="btn-code btn-lg btn-primary btn-block" type="submit">下一步</button>
+			</form>
+			<form id="updatePassword-box" action="javascript:updatePassword();" class="code-box form-all">
+				<div class="pad">
+					<h1 class="h3 mb-3 font-weight-normal">请输入新密码</h1>
+					<label for="password" class="sr-only">密码</label>
+					<input id="password" type="password" name="password" class="form-control" placeholder="密码" required>
+				</div>
+				<button id="updatePassword-next" class="btn-updatePassword btn-lg btn-primary btn-block" type="submit">下一步</button>
+			</form>
+			<form id="register-box" action="javascript:register();" class="code-box form-all">
+				<div class="pad">
+					<h1 class="h3 mb-3 font-weight-normal">注册</h1>
+					<label for="useremail" class="sr-only">邮箱</label>
+					<input type="text" name="useremail-register" class="form-control" placeholder="邮箱" required autofocus>
+					<label for="password" class="sr-only">密码</label>
+					<input type="password" name="password-register" class="form-control" placeholder="密码" required>
+					<label for="code" class="sr-only">验证码</label>
+					<input type="text" name="code-register" class="form-control code" placeholder="验证码" required autofocus>
+				</div>
+				<button id="getCodeBtn" class="btn-getCode btn-lg btn-primary btn-block" onclick="getCode();">获取验证码</button>
+				<button id="register-next" class="btn-register btn-lg btn-primary btn-block" type="submit">注册</button>
+			</form>
 		</div>
 
 	</div>
@@ -91,7 +130,7 @@
 		</div>
 	</footer>
 
-	
+
 
 </body>
 

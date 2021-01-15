@@ -1,18 +1,13 @@
 package com.zrq.controller;
 
 public class User {
-    private String userid;
+    private String useremail;
     private String password;
-    private String name;
-    private int age;
-
-    public String getUserid() {
-        return userid;
+    public User(String useremail, String password) {
+        this.useremail = useremail;
+        this.password = password;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
 
     public String getPassword() {
         return password;
@@ -22,27 +17,18 @@ public class User {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUseremail() {
+        return useremail;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUseremail(String useremail) {
+        this.useremail = useremail;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return "User [password=" + password + ", useremail=" + useremail 
+                + "]";
     }
 }
