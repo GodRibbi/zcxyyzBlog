@@ -1,0 +1,12 @@
+17:17:25.235 [main] INFO  com.zrq.App - Starting App on LAPTOP-8PT4A7RF with PID 12724 (D:\Project\zcxyyzBlog\learn\target\classes started by zrq in D:\Project\zcxyyzBlog\learn)
+17:17:25.255 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+17:17:26.560 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+17:17:26.560 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+17:17:26.560 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+17:17:26.663 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:17:27.765 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+17:17:27.765 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+17:17:27.775 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+17:17:27.776 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+17:17:27.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+17:17:27.921 [main] INFO  com.zrq.App - Started App in 3.113 seconds (JVM running for 3.736)

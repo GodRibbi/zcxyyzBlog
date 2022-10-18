@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <title>blog编辑</title>
+
+
+
+    <link rel="stylesheet" href="css/lib/markdownlib/style.css" />
+    <link rel="stylesheet" href="css/lib/markdownlib/editormd.css" />
+    <link rel="stylesheet" href="js/plugins/layui/css/layui.css" />
+    <link rel="stylesheet" href="css/write.css" />
+</head>
+
+<body>
+    <div id="layout">
+        <header style="padding-top: 50px;">
+            <h1>Blog编辑界面</h1>
+            <p>Blog Editing Interface</p>
+        </header>
+        <div id="test-editormd">
+            <textarea style="display:none;">#### Hello World!</textarea>
+        </div>
+        <form class="layui-form" action="" style="background: #f5f5f5;margin: 0 auto;width: 90%;padding: 20px;">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="article_title" lay-verify="required" lay-reqtext="必填项" autocomplete="off"
+                        placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">简介</label>
+                <div class="layui-input-block">
+                    <textarea name="article_detail" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">图片</label>
+                    <div class="layui-input-inline">
+                        <input type="tel" name="article_image" lay-verify="url" autocomplete="off" placeholder="请输入图片地址"
+                            class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">文章标头</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="article_hat" autocomplete="off" class="layui-input"
+                            placeholder="请输入标头">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">文章类型</label>
+                    <div class="layui-input-inline">
+                        <select name="article_type_id" lay-verify="required" lay-search="">
+                            <option value="">直接选择或搜索选择</option>
+                            <option value="1">Java</option>
+                            <option value="2">前端</option>
+                            <option value="3">Python</option>
+                            <option value="4">PHP</option>
+                            <option value="5">其他</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否置顶</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="article_istop" lay-skin="switch" lay-text="ON|OFF">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Tag</label>
+                <div class="layui-input-block" id="tag" style="padding-bottom: 10px;">
+                    <input type="checkbox" name="写作" title="写作">
+                    <input type="checkbox" name="阅读" title="阅读" checked="">
+                </div>
+                <button id="addTag" type="button" class="layui-btn layui-btn-sm"
+                    style=" margin-left: 110px;">添加Tag</button>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="save">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+        <form class="layui-form" action="" style="background: #f5f5f5;margin: 0 auto;width: 90%;padding: 20px;">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">日记</label>
+                <div class="layui-input-block">
+                    <textarea name="diary_content" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="diary">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/axios.js"></script>
+    <script src="js/lib/qs.js"></script>
+
+    <script src="js/lib/markdownlib/editormd.js"></script>
+    <script src="js/plugins/layui/layui.js"></script>
+    <script type="text/javascript">
+        var form;
+        var layer;
+        var asd = ["123", "1234"]
+        var testEditor;
+        //console.log(Qs.stringify(asd))
+        layui.use(['element', 'jquery', 'form', 'layedit', 'flow', 'layer'], function () {
+            form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+            layer = layui.layer;
+            //……
+
+            //但是，如果你的HTML是动态生成的，自动渲染就会失效
+            //因此你需要在相应的地方，执行下述方法来进行渲染
+            form.render();
+            form.on('submit(diary)', function (e) {
+                axios({
+                    method: 'post',
+                    url: 'http://39.107.117.218:3000/blog/DiaryController/addDiarise',
+                    data: e.field
+                })
+                    .then(function (res) {
+                        layer.msg("上传成功！");
+                    })
+                    .catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+                return false;
+            })
+
+            form.on('submit(save)', function (e) {
+                var tags = new Array();
+
+                var datas = {
+                    "article_title": "",
+                    "article_detail": "",
+                    "article_image": "",
+                    "article_hat": "",
+                    "article_type_id": "",
+                    "article_istop": 0
+                }
+                for (const key in e.field) {
+                    switch (key) {
+                        case "article_title":
+                            datas[key] = e.field[key]
+                            break;
+                        case "article_detail":
+                            datas[key] = e.field[key]
+                            break;
+                        case "article_image":
+                            datas[key] = e.field[key]
+                            break;
+                        case "article_hat":
+                            datas[key] = e.field[key]
+                            break;
+                        case "article_type_id":
+                            datas[key] = e.field[key]
+                            break;
+                        case "article_istop":
+                            datas[key] = 1
+                            break;
+                        default:
+                            tags.push(key);
+                            break;
+                    }
+                }
+
+                console.log(JSON.stringify(tags));
+                axios({
+                    method: 'post',
+                    url: 'http://39.107.117.218:3000/blog/ArticleController/addArticle',
+                    data: datas
+                })
+                    .then(function (res) {
+                        console.log(res);
+
+                        //上传文章TAG
+                        $.ajax({
+                            dataType: "json",
+                            url: 'http://39.107.117.218:3000/blog/ArticleController/addArticleTag/' + res.data,
+                            type: "post",
+                            data: JSON.stringify(tags),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function (data) {
+                                console.log(data);
+                            },
+                            error: function (e) {
+                            }
+                        });
+
+                        //上传文件
+                        var file;
+                        var data = [];
+                        data.push(testEditor.getMarkdown());
+
+                        var properties = { type: 'text/plain' }; // Specify the file's mime-type.
+                        try {
+                            // Specify the filename using the File constructor, but ...
+                            file = new File(data, "test.md", properties);
+                        } catch (e) {
+                            // ... fall back to the Blob constructor if that isn't supported.
+                            file = new Blob(data, properties);
+                        }
+                        /* FormData 是表单数据类 */
+                        var fd = new FormData();
+                        /* 把文件添加到表单里 */
+                        fd.append("name", datas.article_title+".md");
+                        fd.append("upfile", file);
+                        $.ajax({
+                            url: "http://39.107.117.218:3000/blog/FileController/uploadMarkDown",
+                            type: "post",
+                            data: fd,
+                            processData: false,
+                            contentType: false,
+                            success: function (res) {
+                                layer.msg("上传成功！");
+                            },
+
+                            error: function (err) {
+                                alert("网络连接失败,稍后重试", err);
+                            }
+                        })
+                    })
+                    .catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+                return false;
+            });
+        });
+
+
+        $(function () {
+            testEditor = editormd("test-editormd", {
+                width: "90%",
+                height: 740,
+                theme: "dark",
+                previewTheme: "dark",
+                editorTheme: "tomorrow-night-eighties",
+                codeFold: true,
+                //syncScrolling : false,
+                saveHTMLToTextarea: true,    // 保存 HTML 到 Textarea
+                searchReplace: true,
+                //watch : false,                // 关闭实时预览
+                htmlDecode: "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启    
+                //toolbar  : false,             //关闭工具栏
+                //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                emoji: true,
+                taskList: true,
+                tocm: true,         // Using [TOCM]
+                tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                flowChart: true,             // 开启流程图支持，默认关闭
+                sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                markdown: "",
+                path: 'js/lib/markdownlib/',
+                //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为 true
+                //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为 true
+                //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为 true
+                //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为 0.1
+                //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为 #fff
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "http://39.107.117.218:3000/blog/FileController/uploadImage",
+                /*
+                 上传的后台只需要返回一个 JSON 数据，结构如下：
+                 {
+                    success : 0 | 1,           // 0 表示上传失败，1 表示上传成功
+                    message : "提示的信息，上传成功或上传失败及错误信息等。",
+                    url     : "图片地址"        // 上传成功时才返回
+                 }
+                 */
+            });
+
+        });
+        var select = '    <div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><input type="text" class="layui-input layui-name-text" placeholder="请输入Tag"></div>'
+        $("#addTag").bind('click', function () {
+            layer.open({
+                type: 1
+                , title: false //不显示标题栏
+                , closeBtn: true
+                , area: '450px;'
+                , shade: 0.8
+                , id: 'LAY_layuipro1' //设定一个id，防止重复弹出
+                , btn: ['OK']
+                , btn1: function (index, layero) {
+                    //按钮【按钮一】的回调
+                    var text = layero.find('.layui-name-text').val();
+                    console.log(text);
+                    if (text.length > 7 || text.length == 0) {
+                        layer.msg('Tag输入不正确，为空或大于七位', { icon: 7 });
+                        return false;
+                    }
+                    $("#tag").append('<input type="checkbox" name="' + text + '" title="' + text + '">');
+                    form.render();
+                    console.log(1)
+                    layer.close(layer.index);
+                }
+                , btnAlign: 'c'
+                , moveType: 1 //拖拽模式，0或者1
+                , content: select
+                , success: function (layero) {
+                }
+            });
+        });
+        $("#get-md-btn").bind('click', function () {
+            // var file;
+            // var data = [];
+            // data.push(testEditor.getMarkdown());
+
+            // var properties = { type: 'text/plain' }; // Specify the file's mime-type.
+            // try {
+            //     // Specify the filename using the File constructor, but ...
+            //     file = new File(data, "test.md", properties);
+            // } catch (e) {
+            //     // ... fall back to the Blob constructor if that isn't supported.
+            //     file = new Blob(data, properties);
+            // }
+            // /* FormData 是表单数据类 */
+            // var fd = new FormData();
+            // /* 把文件添加到表单里 */
+            // fd.append("name", "test.md");
+            // fd.append("upfile", file);
+            // $.ajax({
+            //     url: "http://39.107.117.218:3000/uploadFile",
+            //     type: "post",
+            //     data: fd,
+            //     processData: false,
+            //     contentType: false,
+            //     success: function (res) {
+            //         if (res) {
+            //             alert("上传成功！");
+            //         }
+            //         console.log(1);
+            //     },
+
+            //     error: function (err) {
+            //         alert("网络连接失败,稍后重试", err);
+            //     }
+            // })
+
+            // var ajax = new XMLHttpRequest();
+
+            // ajax.open("post", "http://39.107.117.218:3000/uploadFile", true);
+
+            // ajax.onload = function () {
+            //     console.log(ajax.responseText);
+            // };
+            // ajax.send(fd);
+            //alert(testEditor.getMarkdown());
+        });
+
+    </script>
+</body>
+
+</html>

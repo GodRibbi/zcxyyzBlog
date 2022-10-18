@@ -1,0 +1,29 @@
+#激活配置文件
+spring:
+  servlet:
+    multipart:
+      enabled : true
+      file-size-threshold : 0
+      max-file-size : 100000000
+      max-request-size : 100000000
+  profiles:
+    action: jdbc
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT&useSSL=false
+    username: zrq
+    password: ZRQhappy1314.
+server:
+  port: 3000
+
+
+mybatis:
+  type-aliases-package: com.zrq.data
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+    # log4j2 日志配置
+logging:
+  config: classpath:log-config.xml
+  level:
+    cn.jay.repository: trace
