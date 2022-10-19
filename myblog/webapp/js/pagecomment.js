@@ -35,12 +35,12 @@ layui.use(['element', 'jquery', 'form', 'layedit', 'flow'], function () {
                     
         axios({
             method: 'post',
-            url: 'http://49.232.222.106:3000/blog/CommentController/addArticleComment',
+            url: url + '/blog/CommentController/addArticleComment',
             data: data.field
         })
             .then(function (response) {
                 if (response.data == "success!") {
-                    axios.get('http://49.232.222.106:3000/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
+                    axios.get(url + '/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
                         .then(function (response) {
                             vm.comment = response.data;
                             layer.msg('留言成功', { icon: 6 });
@@ -63,12 +63,12 @@ layui.use(['element', 'jquery', 'form', 'layedit', 'flow'], function () {
         //console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
         axios({
             method: 'post',
-            url: 'http://49.232.222.106:3000/blog/CommentController/addArticleCommentReply',
+            url: url + '/blog/CommentController/addArticleCommentReply',
             data: data.field
         })
             .then(function (response) {
                 if (response.data == "success!") {
-                    axios.get('http://49.232.222.106:3000/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
+                    axios.get(url + '/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
                         .then(function (response) {
                             vm.comment = response.data;
                             var $container = $(".btn-reply").parent('p').siblings('.replycontainer');
@@ -194,7 +194,7 @@ var vm = new Vue({
             if (!this.thumbsup) {
                 layer.msg('谢谢你的点赞', { icon: 6 });
                 this.thumbsup = true;
-                axios.get('http://49.232.222.106:3000/blog/ArticleController/LikesUp/' + getQueryVariable("id"))
+                axios.get(url + '/blog/ArticleController/LikesUp/' + getQueryVariable("id"))
                     .then(function (response) {
                         if (response = "success") {
                             console.log("success");
@@ -210,7 +210,7 @@ var vm = new Vue({
         }
     },
     mounted() {
-        axios.get('http://49.232.222.106:3000/blog/ArticleController/getArticleById/' + getQueryVariable("id"))
+        axios.get(url + '/blog/ArticleController/getArticleById/' + getQueryVariable("id"))
             .then(function (response) {
                 vm.article = response.data;
                 getMarkDown();
@@ -218,7 +218,7 @@ var vm = new Vue({
             .catch(function (error) { // 请求失败处理
                 console.log(error);
             });
-        axios.get('http://49.232.222.106:3000/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
+        axios.get(url + '/blog/CommentController/getArticleCommentByArticleId/' + getQueryVariable("id"))
             .then(function (response) {
                 vm.comment = response.data;
             })

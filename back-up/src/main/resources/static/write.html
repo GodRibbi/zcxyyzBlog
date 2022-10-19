@@ -55,13 +55,8 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">文章类型</label>
                     <div class="layui-input-inline">
-                        <select name="article_type_id" lay-verify="required" lay-search="">
+                        <select id="article_type" name="article_type_id" lay-verify="required" lay-search="">
                             <option value="">直接选择或搜索选择</option>
-                            <option value="1">Java</option>
-                            <option value="2">前端</option>
-                            <option value="3">Python</option>
-                            <option value="4">PHP</option>
-                            <option value="5">其他</option>
                         </select>
                     </div>
                 </div>
@@ -110,6 +105,8 @@
 
     <script src="js/lib/markdownlib/editormd.js"></script>
     <script src="js/plugins/layui/layui.js"></script>
+    <script src="js/lib/gloable.js"></script>
+
     <script type="text/javascript">
         var form;
         var layer;
@@ -123,11 +120,11 @@
 
             //但是，如果你的HTML是动态生成的，自动渲染就会失效
             //因此你需要在相应的地方，执行下述方法来进行渲染
-            form.render();
+            
             form.on('submit(diary)', function (e) {
                 axios({
                     method: 'post',
-                    url: 'http://39.107.117.218:3000/blog/DiaryController/addDiarise',
+                    url: url + '/blog/DiaryController/addDiarise',
                     data: e.field
                 })
                     .then(function (res) {
@@ -138,7 +135,19 @@
                     });
                 return false;
             })
+            
+            axios.get(url + '/blog/ArticleController/getArticleTypeList')
+                .then(function (response) {
+                    response.data.forEach(element => {
+                    $("#article_type").append("<option value="+element.article_type_id+">"+element.article_type_name+"</option>");
+                    form.render('select');
+                });
+                })
+                .catch(function (error) { // 请求失败处理
+                    console.log(error);
+                });
 
+            form.render('select');
             form.on('submit(save)', function (e) {
                 var tags = new Array();
 
@@ -179,7 +188,7 @@
                 console.log(JSON.stringify(tags));
                 axios({
                     method: 'post',
-                    url: 'http://39.107.117.218:3000/blog/ArticleController/addArticle',
+                    url: url + '/blog/ArticleController/addArticle',
                     data: datas
                 })
                     .then(function (res) {
@@ -188,7 +197,7 @@
                         //上传文章TAG
                         $.ajax({
                             dataType: "json",
-                            url: 'http://39.107.117.218:3000/blog/ArticleController/addArticleTag/' + res.data,
+                            url: url + '/blog/ArticleController/addArticleTag/' + res.data,
                             type: "post",
                             data: JSON.stringify(tags),
                             contentType: "application/json",
@@ -216,10 +225,10 @@
                         /* FormData 是表单数据类 */
                         var fd = new FormData();
                         /* 把文件添加到表单里 */
-                        fd.append("name", datas.article_title+".md");
+                        fd.append("name", datas.article_title + ".md");
                         fd.append("upfile", file);
                         $.ajax({
-                            url: "http://39.107.117.218:3000/blog/FileController/uploadMarkDown",
+                            url: url + "/blog/FileController/uploadMarkDown",
                             type: "post",
                             data: fd,
                             processData: false,
@@ -239,8 +248,6 @@
                 return false;
             });
         });
-
-
         $(function () {
             testEditor = editormd("test-editormd", {
                 width: "90%",
@@ -271,7 +278,7 @@
                 //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为 #fff
                 imageUpload: true,
                 imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                imageUploadURL: "http://39.107.117.218:3000/blog/FileController/uploadImage",
+                imageUploadURL: url + "/blog/FileController/uploadImage",
                 /*
                  上传的后台只需要返回一个 JSON 数据，结构如下：
                  {
@@ -312,52 +319,6 @@
                 , success: function (layero) {
                 }
             });
-        });
-        $("#get-md-btn").bind('click', function () {
-            // var file;
-            // var data = [];
-            // data.push(testEditor.getMarkdown());
-
-            // var properties = { type: 'text/plain' }; // Specify the file's mime-type.
-            // try {
-            //     // Specify the filename using the File constructor, but ...
-            //     file = new File(data, "test.md", properties);
-            // } catch (e) {
-            //     // ... fall back to the Blob constructor if that isn't supported.
-            //     file = new Blob(data, properties);
-            // }
-            // /* FormData 是表单数据类 */
-            // var fd = new FormData();
-            // /* 把文件添加到表单里 */
-            // fd.append("name", "test.md");
-            // fd.append("upfile", file);
-            // $.ajax({
-            //     url: "http://39.107.117.218:3000/uploadFile",
-            //     type: "post",
-            //     data: fd,
-            //     processData: false,
-            //     contentType: false,
-            //     success: function (res) {
-            //         if (res) {
-            //             alert("上传成功！");
-            //         }
-            //         console.log(1);
-            //     },
-
-            //     error: function (err) {
-            //         alert("网络连接失败,稍后重试", err);
-            //     }
-            // })
-
-            // var ajax = new XMLHttpRequest();
-
-            // ajax.open("post", "http://39.107.117.218:3000/uploadFile", true);
-
-            // ajax.onload = function () {
-            //     console.log(ajax.responseText);
-            // };
-            // ajax.send(fd);
-            //alert(testEditor.getMarkdown());
         });
 
     </script>

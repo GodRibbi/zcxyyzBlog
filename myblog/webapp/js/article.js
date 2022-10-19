@@ -5,7 +5,7 @@ article.Init = function ($) {
     //var $ = layui.jquery;
     var slider = 0;
     blogtype();
-    
+
     //类别导航开关点击事件
     $('.category-toggle').click(function (e) {
         e.stopPropagation();    //阻止事件冒泡
@@ -49,7 +49,7 @@ article.Init = function ($) {
         $('.article-category').removeClass('categoryIn').addClass('categoryOut');
     }
     function blogtype() {
-        
+
         $('#category li').hover(function () {
             $(this).addClass('current');
             var num = $(this).attr('data-index');
@@ -102,43 +102,77 @@ layui.use(['jquery'], function () {
     }
 
 });
-
+var article_top_original = [];
+var article_list_original = [];
+var article_type_List_original = [];
 var vm = new Vue({
     el: '#doc-container',
     data: {
-        article_top:[],
-        article_list:[],
-        article_type_List:[]
+        article_top: [],
+        article_list: [],
+        article_type_List: []
+    },
+    methods: {
+        doThis: function (e) {
+            $('#category li').hover(function () {
+                $(this).addClass('current');
+                var num = $(this).attr('data-index');
+                $('.slider').css({ 'top': ((parseInt(num)) * 40) + 'px' });
+            }, function () {
+                $(this).removeClass('current');
+                $('.slider').css({ 'top': slider });
+            });
+            if(e!=0){
+                let top = [];
+                let index = 0;
+                article_top_original.forEach(element => {
+                    if (element.article_type_id == e) {
+                        top[index] = element;
+                    }
+                });
+                let list = [];
+                index = 0;
+                article_list_original.forEach(element => {
+                    if (element.article_type_id == e) {
+                        list[index] = element;
+                    }
+                });
+                vm.article_top = top;
+                vm.article_list = list;
+            }
+            else if(e==0)
+            {
+                vm.article_top = article_top_original;
+                vm.article_list = article_list_original;
+            }
+        }
     },
     mounted() {
-        axios.get('http://49.232.222.106:3000/blog/ArticleController/getArticleTop')
+        axios.get(url + '/blog/ArticleController/getArticleTop')
             .then(function (response) {
                 vm.article_top = response.data;
+                article_top_original = response.data;
             })
             .catch(function (error) { // 请求失败处理
                 console.log(error);
             });
-        axios.get('http://49.232.222.106:3000/blog/ArticleController/getArticleList')
+        axios.get(url + '/blog/ArticleController/getArticleList')
             .then(function (response) {
                 vm.article_list = response.data;
+                article_list_original = response.data;
             })
             .catch(function (error) { // 请求失败处理
                 console.log(error);
             });
-        axios.get('http://49.232.222.106:3000/blog/ArticleController/getArticleTypeList')
+        axios.get(url + '/blog/ArticleController/getArticleTypeList')
             .then(function (response) {
                 vm.article_type_List = response.data;
-                $('#category li').hover(function () {
-                    $(this).addClass('current');
-                    var num = $(this).attr('data-index');
-                    $('.slider').css({ 'top': ((parseInt(num) - 1) * 40) + 'px' });
-                }, function () {
-                    $(this).removeClass('current');
-                    $('.slider').css({ 'top': slider });
-                });
+                article_type_List_original = response.data;
+
             })
             .catch(function (error) { // 请求失败处理
                 console.log(error);
             });
-    }
+    },
+
 })

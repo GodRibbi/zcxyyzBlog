@@ -14,7 +14,7 @@
         }
     },
     mounted() {
-        axios.get('http://49.232.222.106:3000/blog/DiaryController/getDiarise')
+        axios.get(url + '/blog/DiaryController/getDiarise')
             .then(function (response) {
                 vm.diary = response.data;
             })

@@ -45,12 +45,12 @@ layui.use(['element', 'jquery', 'form', 'layedit', 'flow'], function () {
 
             axios({
                 method: 'post',
-                url: 'http://49.232.222.106:3000/blog/CommentController/addMainComment',
+                url: url + '/blog/CommentController/addMainComment',
                 data: data.field
             })
                 .then(function (response) {
                     if (response.data == "success!") {
-                        axios.get('http://49.232.222.106:3000/blog/CommentController/getMainComment')
+                        axios.get(url + '/blog/CommentController/getMainComment')
                             .then(function (response) {
                                 vm.comment = response.data;
                                 layer.msg('留言成功', { icon: 6 });
@@ -73,12 +73,12 @@ layui.use(['element', 'jquery', 'form', 'layedit', 'flow'], function () {
         //console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
         axios({
             method: 'post',
-            url: 'http://49.232.222.106:3000/blog/CommentController/addMainCommentReply',
+            url: url + '/blog/CommentController/addMainCommentReply',
             data: data.field
         })
             .then(function (response) {
                 if (response.data == "success!") {
-                    axios.get('http://49.232.222.106:3000/blog/CommentController/getMainComment')
+                    axios.get(url + '/blog/CommentController/getMainComment')
                         .then(function (response) {
                             vm.comment = response.data;
                             var $container = $(".btn-reply").parent('p').siblings('.replycontainer');
@@ -144,7 +144,7 @@ var vm = new Vue({
         }
     },
     mounted() {
-        axios.get('http://49.232.222.106:3000/blog/CommentController/getMainComment')
+        axios.get(url + '/blog/CommentController/getMainComment')
             .then(function (response) {
                 vm.comment = response.data;
             })

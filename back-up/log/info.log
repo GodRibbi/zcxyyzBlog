@@ -10,3 +10,341 @@
 17:17:27.776 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
 17:17:27.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
 17:17:27.921 [main] INFO  com.zrq.App - Started App in 3.113 seconds (JVM running for 3.736)
+12:31:13.078 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 31556 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+12:31:13.090 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+12:31:14.990 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+12:31:14.992 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+12:31:14.993 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:31:15.063 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:31:16.275 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+12:31:16.277 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+12:31:16.278 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+12:31:16.279 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+12:31:16.397 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+12:31:16.458 [main] INFO  com.zrq.App - Started App in 4.04 seconds (JVM running for 5.176)
+14:46:58.670 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:46:58.800 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:46:58.800 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:46:58.800 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:46:58.817 [http-nio-3000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:46:59.277 [http-nio-3000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:46:59.565 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:761
+14:46:59.566 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:761
+14:46:59.591 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:799
+14:53:07.577 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - ID:338	获取文章成功！
+14:53:07.583 [http-nio-3000-exec-8] INFO  com.zrq.controller.CommentController - ID:338	获取文章评论成功！
+14:53:07.628 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:53
+14:53:07.672 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:97
+14:53:28.950 [http-nio-3000-exec-10] INFO  com.zrq.controller.CommentController - ID:338	获取文章评论成功！
+14:53:28.950 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - ID:338	获取文章成功！
+14:53:28.988 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:38
+14:53:29.028 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:78
+14:53:56.972 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:53:56.972 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:53:56.973 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:53:57.018 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:45
+14:53:57.025 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:53
+14:53:57.067 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:95
+14:56:55.881 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:56:55.882 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:56:55.882 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:56:55.930 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:48
+14:56:55.938 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:57
+14:56:55.978 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:96
+14:57:53.924 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:57:53.924 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:57:53.924 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:57:53.968 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:43
+14:57:53.972 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:48
+14:57:54.012 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:88
+14:57:57.900 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:57:57.900 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:57:57.900 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:57:57.946 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:46
+14:57:57.954 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:54
+14:57:57.987 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:86
+14:57:59.337 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:57:59.337 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:57:59.337 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:57:59.377 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:40
+14:57:59.390 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:53
+14:57:59.428 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:91
+14:58:00.401 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+14:58:00.401 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+14:58:00.401 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+14:58:00.441 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:40
+14:58:00.452 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:51
+14:58:00.488 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:87
+15:02:05.438 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:02:05.439 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:02:05.439 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:02:05.485 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:46
+15:02:05.491 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:53
+15:02:05.525 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:86
+15:12:43.843 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:12:43.843 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:12:43.846 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:12:43.884 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:38
+15:12:43.893 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:50
+15:12:43.926 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:83
+15:12:50.670 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:12:50.712 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:42
+15:14:58.368 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:14:58.370 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:14:58.370 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:14:58.412 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:42
+15:14:58.416 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:48
+15:14:58.454 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:84
+15:15:09.250 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:15:09.250 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:15:09.250 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:15:09.295 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:45
+15:15:09.297 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:47
+15:15:09.331 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:81
+15:15:43.979 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:15:43.979 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:15:43.979 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:15:44.025 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:46
+15:15:44.032 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:53
+15:15:44.066 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:87
+15:19:24.334 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:19:24.336 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:19:24.337 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:19:24.387 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:53
+15:19:24.392 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:55
+15:19:24.426 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:90
+15:19:46.010 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:19:46.010 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:19:46.010 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:19:46.052 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:19:46.059 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:49
+15:19:46.090 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:79
+15:21:10.496 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:21:10.498 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:21:10.499 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:21:10.536 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:38
+15:21:10.541 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:45
+15:21:10.581 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:83
+15:22:48.994 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:22:48.994 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:22:48.995 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:22:49.037 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:42
+15:22:49.044 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:50
+15:22:49.076 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:82
+15:23:17.371 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:23:17.372 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:23:17.372 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:23:17.418 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:46
+15:23:17.426 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:55
+15:23:17.455 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:83
+15:26:45.997 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:26:45.998 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:26:45.998 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:26:46.037 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:39
+15:26:46.044 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:47
+15:26:46.080 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:82
+15:27:24.337 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:27:24.337 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:27:24.337 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:27:24.378 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:27:24.388 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:51
+15:27:24.416 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:79
+15:28:04.576 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:28:04.578 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:28:04.578 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:28:04.617 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:39
+15:28:04.622 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:46
+15:28:04.658 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:80
+15:28:24.186 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:28:24.186 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:28:24.187 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:28:24.226 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:39
+15:28:24.236 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:50
+15:28:24.262 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:76
+15:29:06.463 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:29:06.464 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:29:06.464 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:29:06.505 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:29:06.514 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:51
+15:29:06.540 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:76
+15:29:17.551 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:29:17.551 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:29:17.552 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:29:17.590 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:38
+15:29:17.595 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:44
+15:29:17.621 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:70
+15:33:14.526 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:33:14.526 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:33:14.526 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:33:14.568 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:42
+15:33:14.575 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:49
+15:33:14.605 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:79
+15:33:52.125 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:33:52.125 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:33:52.125 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:33:52.166 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:33:52.178 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:53
+15:33:52.209 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:84
+15:34:18.350 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:34:18.350 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:34:18.350 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:34:18.392 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:42
+15:34:18.399 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:49
+15:34:18.432 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:82
+15:35:48.314 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:35:48.314 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:35:48.314 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:35:48.357 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:43
+15:35:48.363 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:49
+15:35:48.388 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:74
+15:37:05.704 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - ID:341	获取文章成功！
+15:37:05.704 [http-nio-3000-exec-9] INFO  com.zrq.controller.CommentController - ID:341	获取文章评论成功！
+15:37:05.780 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:76
+15:37:05.818 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:114
+15:42:29.131 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:42:29.131 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:42:29.133 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:42:29.173 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:40
+15:42:29.182 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:51
+15:42:29.209 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:78
+15:43:17.359 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:43:17.359 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:43:17.359 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:43:17.399 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:40
+15:43:17.407 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:48
+15:43:17.440 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:81
+15:43:22.800 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:43:22.801 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:43:22.802 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:43:22.843 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:43:22.851 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:51
+15:43:22.877 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:76
+15:44:37.256 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:44:37.256 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:44:37.256 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:44:37.297 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:44:37.308 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:52
+15:44:37.340 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:84
+15:45:24.299 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:45:24.299 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:45:24.299 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:45:24.340 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:41
+15:45:24.351 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:52
+15:45:24.379 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:79
+15:56:44.462 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:56:44.462 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:56:44.465 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:56:44.506 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:40
+15:56:44.517 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:55
+15:56:44.542 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:80
+15:59:27.750 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+15:59:27.751 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+15:59:27.751 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+15:59:27.794 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:43
+15:59:27.803 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:53
+15:59:27.827 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:76
+16:01:08.431 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+16:01:08.431 [http-nio-3000-exec-4] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+16:01:08.435 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:01:08.472 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:36
+16:01:08.475 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:44
+16:01:08.504 [http-nio-3000-exec-4] INFO  com.zrq.aspect.WebLogAspect - time:73
+16:01:23.258 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+16:01:23.258 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+16:01:23.260 [http-nio-3000-exec-2] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:01:23.297 [http-nio-3000-exec-2] INFO  com.zrq.aspect.WebLogAspect - time:37
+16:01:23.306 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:48
+16:01:23.335 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:77
+16:01:50.996 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+16:01:50.996 [http-nio-3000-exec-7] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+16:01:50.998 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:01:51.036 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:38
+16:01:51.044 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:48
+16:01:51.071 [http-nio-3000-exec-7] INFO  com.zrq.aspect.WebLogAspect - time:75
+16:02:01.602 [http-nio-3000-exec-8] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:02:01.602 [http-nio-3000-exec-6] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+16:02:01.603 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+16:02:01.639 [http-nio-3000-exec-8] INFO  com.zrq.aspect.WebLogAspect - time:37
+16:02:01.651 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:48
+16:02:01.678 [http-nio-3000-exec-6] INFO  com.zrq.aspect.WebLogAspect - time:75
+16:03:19.849 [http-nio-3000-exec-3] INFO  com.zrq.controller.ArticleController - 	获取置顶文章列表成功！
+16:03:19.849 [http-nio-3000-exec-1] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:03:19.849 [http-nio-3000-exec-9] INFO  com.zrq.controller.ArticleController - 	获取文章列表成功！
+16:03:19.888 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:39
+16:03:19.898 [http-nio-3000-exec-3] INFO  com.zrq.aspect.WebLogAspect - time:48
+16:03:19.925 [http-nio-3000-exec-9] INFO  com.zrq.aspect.WebLogAspect - time:76
+16:11:55.699 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:11:55.703 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+16:12:12.396 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 24816 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+16:12:12.409 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+16:12:14.257 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+16:12:14.258 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+16:12:14.259 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:12:14.337 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:12:15.519 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:12:15.521 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:12:15.522 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:12:15.523 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:12:15.635 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+16:12:15.687 [main] INFO  com.zrq.App - Started App in 3.993 seconds (JVM running for 5.175)
+16:15:39.483 [http-nio-3000-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:16:27.589 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 14240 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+16:16:27.607 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+16:16:29.413 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+16:16:29.414 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+16:16:29.415 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:16:29.492 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:16:30.756 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:16:30.758 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:16:30.759 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:16:30.759 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:16:30.871 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+16:16:30.924 [main] INFO  com.zrq.App - Started App in 4.035 seconds (JVM running for 5.223)
+16:16:32.762 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:19:04.886 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 29312 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+16:19:04.900 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+16:19:06.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+16:19:06.743 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+16:19:06.744 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:19:06.811 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:19:08.040 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:19:08.041 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:19:08.043 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:19:08.043 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:19:08.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+16:19:08.216 [main] INFO  com.zrq.App - Started App in 4.022 seconds (JVM running for 5.213)
+16:19:09.755 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:21:26.538 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 6716 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+16:21:26.554 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+16:21:28.420 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+16:21:28.421 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+16:21:28.422 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:21:28.495 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:21:29.697 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:21:29.699 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:21:29.701 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:21:29.702 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:21:29.816 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+16:21:29.870 [main] INFO  com.zrq.App - Started App in 4.044 seconds (JVM running for 5.138)
+16:21:32.498 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:36:35.735 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 4932 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+16:36:35.751 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+16:36:37.703 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+16:36:37.704 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+16:36:37.705 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:36:37.790 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:36:39.060 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:36:39.062 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:36:39.063 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:36:39.064 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:36:39.178 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+16:36:39.233 [main] INFO  com.zrq.App - Started App in 4.181 seconds (JVM running for 5.398)
+16:36:48.350 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:36:48.636 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:36:48.662 [http-nio-3000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:36:49.025 [http-nio-3000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:36:49.233 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:601
+16:37:53.746 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
+16:37:53.789 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:43
+16:38:10.710 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:38:10.727 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
