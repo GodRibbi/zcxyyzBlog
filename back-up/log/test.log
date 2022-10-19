@@ -1,21 +1,19 @@
-16:36:35.735 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 4932 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
-16:36:35.751 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
-16:36:37.703 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
-16:36:37.704 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-16:36:37.705 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
-16:36:37.790 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:36:39.060 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-16:36:39.062 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-16:36:39.063 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-16:36:39.064 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
-16:36:39.178 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
-16:36:39.233 [main] INFO  com.zrq.App - Started App in 4.181 seconds (JVM running for 5.398)
-16:36:48.350 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:36:48.636 [http-nio-3000-exec-10] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
-16:36:48.662 [http-nio-3000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-16:36:49.025 [http-nio-3000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-16:36:49.233 [http-nio-3000-exec-10] INFO  com.zrq.aspect.WebLogAspect - time:601
-16:37:53.746 [http-nio-3000-exec-5] INFO  com.zrq.controller.ArticleController - 	获取文章类型成功！
-16:37:53.789 [http-nio-3000-exec-5] INFO  com.zrq.aspect.WebLogAspect - time:43
-16:38:10.710 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-16:38:10.727 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:25:08.389 [main] INFO  com.zrq.App - Starting App v1.0 on DESKTOP-8MMT2BM with PID 13888 (E:\Project\zcxyyzBlog\back-up\target\backup-1.0.jar started by Administrator in E:\Project\zcxyyzBlog\back-up)
+18:25:08.401 [main] INFO  com.zrq.App - No active profile set, falling back to default profiles: default
+18:25:10.325 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+18:25:10.327 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+18:25:10.327 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+18:25:10.407 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:25:11.705 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+18:25:11.707 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+18:25:11.708 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+18:25:11.709 [main] INFO  tk.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+18:25:11.836 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+18:25:11.895 [main] INFO  com.zrq.App - Started App in 4.213 seconds (JVM running for 5.447)
+18:25:15.279 [http-nio-3000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:25:15.381 [http-nio-3000-exec-1] INFO  com.zrq.controller.DiaryController - 	获取日记成功
+18:25:15.396 [http-nio-3000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:25:15.827 [http-nio-3000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:25:16.030 [http-nio-3000-exec-1] INFO  com.zrq.aspect.WebLogAspect - time:659
+18:25:26.697 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:25:26.715 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

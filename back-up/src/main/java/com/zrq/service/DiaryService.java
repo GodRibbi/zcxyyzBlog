@@ -41,11 +41,14 @@ public class DiaryService {
                 djList.add(new DiaryJson());
                 djList.get(i).setYear(year);
                 djList.get(i).setDiaries(new ArrayList<>());
+                djList.get(i).getDiaries().add(diary);
             }
             else{
                 djList.get(i).getDiaries().add(diary);
             }
         }
+        System.out.println(djList);
+        System.out.println("++++++++++++++++++++++++++");
         return djList;
     }
     public void addDiary(Diary diary) {
