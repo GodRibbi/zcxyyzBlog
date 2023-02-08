@@ -1,4 +1,6 @@
-﻿var url= "http://localhost:3000"
+﻿// var url= "http://localhost:3000"
+var url= "http://39.107.117.218:3000"
+
 layui.use(['jquery', 'layer', 'util'], function () {
     var $ = layui.jquery,
         layer = layui.layer,

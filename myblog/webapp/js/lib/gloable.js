@@ -1,4 +1,5 @@
-﻿var url= "http://localhost:3000"
+﻿// var url= "http://localhost:3000"
+var url= "http://39.107.117.218:3000"
 
 
 
