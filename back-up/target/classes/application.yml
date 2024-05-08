@@ -10,7 +10,7 @@ spring:
     action: jdbc
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url:  jdbc:mysql://39.107.117.218:3306/blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT&useSSL=false
+    url:  jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=GMT&useSSL=false
     username: zrq
     password: ZRQhappy1314.
 server:

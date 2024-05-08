@@ -47,8 +47,6 @@ public class DiaryService {
                 djList.get(i).getDiaries().add(diary);
             }
         }
-        System.out.println(djList);
-        System.out.println("++++++++++++++++++++++++++");
         return djList;
     }
     public void addDiary(Diary diary) {

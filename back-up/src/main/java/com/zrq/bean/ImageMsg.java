@@ -11,7 +11,7 @@ public class ImageMsg {
     public ImageMsg(int success, String message, String url) {
         this.success = success;
         this.message = message;
-        this.url = "http://39.107.117.218/images/"+url;
+        this.url = "https://www.whitefoal.com/images/"+url;
     }
     
 }

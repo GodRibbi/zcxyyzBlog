@@ -49,7 +49,7 @@ public class ArticleService {
 
     public int addArticle(Article article) {
         article.setArticle_date(new java.sql.Date(new java.util.Date().getTime()));
-        article.setArticle_url("http://39.107.117.218/BlogMarkdown/"+article.getArticle_title()+".md");
+        article.setArticle_url("https://www.whitefoal.com/BlogMarkdown/"+article.getArticle_title()+".md");
         articleMapper.addArticle(article);
         return articleMapper.returnArticleId(article);
     }
